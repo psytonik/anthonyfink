@@ -2,6 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  height: 100%;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -13,4 +15,20 @@ a {
 
 * {
   box-sizing: border-box;
+}
+.self-typed {
+  font-size: 31px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: white;
+}
+.absolute {
+  position: absolute;
+}
+.clickable {
+  cursor: pointer;
+}
+.image {
+  width: auto;
+  max-width: 100%;
 }

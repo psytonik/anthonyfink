@@ -14,7 +14,10 @@
 
 # production
 /build
-
+# work folder
+/work
+# webstorm files
+/.idea
 # misc
 .DS_Store
 *.pem
