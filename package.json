@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "node server/server.js",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server/server.js"
+    "start": "cross-env NODE_ENV=production node server/server.js",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@auth0/auth0-react": "^1.1.0",
