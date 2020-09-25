@@ -16,10 +16,10 @@
 /build
 
 # work folder
-work
-server
+/work/
+/server/
 # webstorm files
-.idea
+/.idea/
 
 # misc
 .DS_Store

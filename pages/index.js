@@ -10,7 +10,7 @@ export const IndexPage = () => {
         <BaseLayout className="cover" headerType="index">
             <div className="main-section">
                 <div className="background-image">
-                    <img src="/images/background-index.png"  alt="background"/>
+                    <img rel="preload" src="/images/background-index.png" alt="background"/>
                 </div>
 
                 <Container>
@@ -25,7 +25,7 @@ export const IndexPage = () => {
                                                 Have a look at my portfolio and job history.
                                             </div>
                                         </div>
-                                        <img className="image" src="/images/shoot.png" alt="section"/>
+                                        <img rel="preload" className="image" src="/images/shoot.jpg" alt="section"/>
                                         <div className="shadow-custom">
                                             <div className="shadow-inner"> </div>
                                         </div>
