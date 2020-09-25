@@ -3,9 +3,10 @@ const next = require('next');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({dev});
 const handle = app.getRequestHandler();
-
+const compression = require('compression');
 app.prepare().then(()=>{
     const server = express();
+    server.use(compression())
     server.get('/api/v1/admin',(req,res)=>{
         return res.json()
     })
