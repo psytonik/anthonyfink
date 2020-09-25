@@ -15,7 +15,6 @@ const PortfolioForm = () => {
     })
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(value)
     }
     const handleChange = name => e => {
         setValue({...value, [name]:e.target.value})
