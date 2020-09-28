@@ -5,8 +5,8 @@ import BasePage from "../components/BasePage";
 const CvPage = () => {
     return (
         <BaseLayout>
-            <BasePage>
-                <h1>CV</h1>
+            <BasePage title="Read my CV">
+
             </BasePage>
         </BaseLayout>
     );

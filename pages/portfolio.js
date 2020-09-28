@@ -9,7 +9,7 @@ const PortfolioPage = () => {
 
         const loadData = async () => {
             const res = await getPortfolio();
-            setPortfolio( await res.data)
+            setPortfolio( await res)
         }
         useEffect(()=>{
             let isActive = true;
@@ -17,7 +17,7 @@ const PortfolioPage = () => {
                 loadData()
             }
             return () => isActive = false;
-        },[]);
+        },[loadData]);
     return (
         <BaseLayout>
             <BasePage

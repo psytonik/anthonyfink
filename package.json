@@ -29,5 +29,8 @@
     "reactstrap": "^8.6.0",
     "sass": "^1.26.11",
     "swr": "^0.3.5"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0"
   }
 }

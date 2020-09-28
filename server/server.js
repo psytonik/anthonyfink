@@ -7,8 +7,7 @@ const compression = require('compression');
 const mongoose = require('mongoose');
 const config = require("./config");
 const bodyParser = require('body-parser');
-
-mongoose.connect(config.DB_URI,{useNewUrlParser:true,useUnifiedTopology: true})
+mongoose.connect(process.env.DB_URI,{useNewUrlParser:true,useUnifiedTopology: true})
     .then(()=>console.log('Im your Db'))
     .catch(e=> console.error(e));
 
