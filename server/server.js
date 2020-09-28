@@ -5,8 +5,10 @@ const app = next({dev});
 const handle = app.getRequestHandler();
 const compression = require('compression');
 const mongoose = require('mongoose');
-const config = require("./config");
+// const config = require("./config");
 const bodyParser = require('body-parser');
+require("dotenv").config();
+
 mongoose.connect(process.env.DB_URI,{useNewUrlParser:true,useUnifiedTopology: true})
     .then(()=>console.log('Im your Db'))
     .catch(e=> console.error(e));

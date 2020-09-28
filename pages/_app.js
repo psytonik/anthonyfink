@@ -5,6 +5,7 @@ import '../styles/_header.scss';
 import '../styles/_index.scss';
 import '../styles/_portfolio.scss'
 import '../styles/_about.scss';
+import '../styles/_cv.scss';
 
 import React from "react";
 import {Auth0Provider} from "@auth0/auth0-react";

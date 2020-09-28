@@ -1,12 +1,12 @@
 import React from 'react';
-import Link from "next/link";
+import ActiveLink from "../ActiveLink";
 
 const BsNavLink = (props) => {
     const {route,title} = props
     return (
-            <Link href={route}>
-                <a className="nav-link port-navbar-link">{title}</a>
-            </Link>
+        <ActiveLink activeClassName="active" route={route}>
+            <a className="nav-link port-navbar-link">{title}</a>
+        </ActiveLink>
     );
 };
 

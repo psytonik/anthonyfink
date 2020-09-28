@@ -11,9 +11,10 @@ const Header = (props) => {
     // const { isAuthenticated } = useAuth0();
 
     const {className} = props;
+    const menuOpenClass =  isOpen ? 'menu-open': 'menu-close';
     return (
         <React.Fragment>
-            <Navbar color="transparent" dark expand="md" className={` port-navbar port-nav-base absolute ${className}`}>
+            <Navbar color="transparent" dark expand="md" className={`port-navbar port-nav-base absolute ${className} ${menuOpenClass}`}>
                         <NavbarBrand className="port-navbar-brand">
                                 Anthony Fink
                         </NavbarBrand>

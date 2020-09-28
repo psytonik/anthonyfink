@@ -63,7 +63,7 @@ export const IndexPage = () => {
                         <Col md="6" className="hero-welcome-wrapper">
                             <div className="hero-welcome-text">
                                 <h1>
-                                    Welcome to the portfolio website of Anthony Fink.
+                                    Welcome to the portfolio website of <span className="font-weight-bold">Anthony Fink.</span>
                                     Get informed, collaborate and discover projects I was working on through the year!
                                 </h1>
                             </div>
@@ -86,6 +86,7 @@ export const IndexPage = () => {
                         </Col>
                     </Row>
                 </Container>
+                <span className="service-link" >Site created by :{" "}<a href="https://anthonyfink.dev">Anthony Fink</a></span>
             </div>
         </BaseLayout>
     )
