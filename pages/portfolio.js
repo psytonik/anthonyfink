@@ -2,20 +2,22 @@ import React, {useEffect, useState} from 'react';
 import BaseLayout from "../components/Layout/baseLayout";
 import BasePage from "../components/BasePage";
 import {Card,CardText,CardTitle,CardBody,CardHeader,Col,Row} from "reactstrap";
-import axios from "axios";
+import {getPortfolio} from "../services/action";
 
 const PortfolioPage = () => {
         let [portfolio,setPortfolio] = useState( []);
-        const ac = new AbortController()
+
         const loadData = async () => {
-            const url = '/api/v1/portfolio';
-            const res =  axios.get(url);
-            setPortfolio((await res).data)
+            const res = await getPortfolio();
+            setPortfolio( await res.data)
         }
         useEffect(()=>{
-            loadData()
-            return () => ac.abort()
-        },[loadData]);
+            let isActive = true;
+            if(isActive){
+                loadData()
+            }
+            return () => isActive = false;
+        },[]);
     return (
         <BaseLayout>
             <BasePage
