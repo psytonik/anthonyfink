@@ -15,11 +15,9 @@
 # production
 /build
 
-# work folder
-/work/
-/server/
-# webstorm files
-/.idea/
+# work folders
+/server/config/dev.js
+/.idea
 
 # misc
 .DS_Store

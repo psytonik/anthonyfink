@@ -1,10 +1,21 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import BaseLayout from "../components/Layout/baseLayout";
 import BasePage from "../components/BasePage";
 import {Card,CardText,CardTitle,CardBody,CardHeader,Col,Row} from "reactstrap";
+import axios from "axios";
 
 const PortfolioPage = () => {
-        const works = ['WeWork', 'PsyStream','One Click Pharma','Get A Fast Loan 4 U']
+        let [portfolio,setPortfolio] = useState( []);
+        const ac = new AbortController()
+        const loadData = async () => {
+            const url = '/api/v1/portfolio';
+            const res =  axios.get(url);
+            setPortfolio((await res).data)
+        }
+        useEffect(()=>{
+            loadData()
+            return () => ac.abort()
+        },[loadData]);
     return (
         <BaseLayout>
             <BasePage
@@ -12,25 +23,25 @@ const PortfolioPage = () => {
                 className="portfolio-page"
             >
                 <Row>
-                    {works.map((work,id)=>{
+                    {portfolio.map((p,id)=>{
                         return(
-                            <Col md="4" key={id}>
+                            <Col md="4" key={id} >
                                 <React.Fragment >
                         <span>
                             <Card className="portfolio-card">
-                            <CardHeader className="portfolio-card-header">Some Position at {work}</CardHeader>
+                            <CardHeader className="portfolio-card-header">{p.position}</CardHeader>
                             <CardBody>
-                                <p className="portfolio-card-city"> Some Location </p>
-                                <CardTitle className="portfolio-card-title">Some Company</CardTitle>
-                                <CardText className="portfolio-card-text">Some Description</CardText>
+                                <p className="portfolio-card-city"> {p.location} </p>
+                                <CardTitle className="portfolio-card-title">{p.company}</CardTitle>
+                                <CardText className="portfolio-card-text">{p.description}</CardText>
                                 <div className="readMore"> </div>
                             </CardBody>
                             </Card>
                         </span>
                                 </React.Fragment>
                             </Col>
-                        )
-                    })}
+                        )}
+                        )}
                 </Row>
             </BasePage>
         </BaseLayout>

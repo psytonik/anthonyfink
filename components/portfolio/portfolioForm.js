@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Form,Input,FormGroup,Button,Label,Col,CustomInput} from 'reactstrap';
-import PortfolioDateForm from './portDate';
 
 const PortfolioForm = () => {
     const [value,setValue] = useState({
@@ -15,6 +14,7 @@ const PortfolioForm = () => {
     })
     const handleSubmit = e => {
         e.preventDefault();
+        console.log(value)
     }
     const handleChange = name => e => {
         setValue({...value, [name]:e.target.value})
@@ -93,8 +93,8 @@ const PortfolioForm = () => {
                             required />
                     </FormGroup>
                 )}
-                <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="Still work" />
-                <Button type="submit" value="Submit" >Submit</Button>
+                <CustomInput type="switch" id="CustomSwitch" name="switch" label="Still work" />
+                <Button color="success" size="lg" type="submit" value="submit" >Submit</Button>
             </Form>
         </Col>
     );

@@ -1,13 +1,28 @@
-import React from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {Container,Row,Col} from "reactstrap";
 import BaseLayout from "../components/Layout/baseLayout";
 import Typed from 'react-typed';
 
-export const IndexPage = () => {
 
+export const IndexPage = () => {
+    const [isFlipping, setIsFlipping] = useState(false);
+    const flipInterval = useRef();
+
+    useEffect(() => {
+        startAnimation();
+        return () => flipInterval.current && clearInterval(flipInterval.current)
+    }, []);
+
+    const startAnimation = () => {
+        flipInterval.current = setInterval(() => {
+            setIsFlipping(prevFlipping => !prevFlipping);
+        }, 20000);
+    }
     const roles = ['Web Developer', 'Tech Lover', 'Team Player', 'Creative', 'ReactJS','NextJs','NodeJS','Musician']
     return (
-        <BaseLayout className="cover" headerType="index">
+        <BaseLayout
+            className={`cover ${isFlipping ? 'cover-orange' : 'cover-blue'}`}
+            headerType="index">
             <div className="main-section">
                 <div className="background-image">
                     <img rel="preload" src="/images/background-index.png" alt="background"/>
@@ -17,8 +32,8 @@ export const IndexPage = () => {
                     <Row>
                         <Col md="6">
                             <div className="hero-section">
-                                <div className={`flipper`}>
-                                    <div className="back">
+                                <div className={`flipper ${isFlipping ? 'isFlipping' : ''}`}>
+                                    <div className="front">
                                         <div className="hero-section-content">
                                             <h2> Full Stack Web Developer </h2>
                                             <div className="hero-section-content-intro">
@@ -27,6 +42,18 @@ export const IndexPage = () => {
                                         </div>
                                         <img rel="preload" className="image" src="/images/shoot.jpg" alt="section"/>
                                         <div className="shadow-custom">
+                                            <div className="shadow-inner"> </div>
+                                        </div>
+                                    </div>
+                                    <div className="back">
+                                        <div className="hero-section-content">
+                                            <h2> Get Your Projects Done </h2>
+                                            <div className="hero-section-content-intro">
+                                                Professional and top quality service in web development.
+                                            </div>
+                                        </div>
+                                        <img rel="preload" className="image" src="/images/shoot2.jpg" alt="section"/>
+                                        <div className="shadow-custom shadow-custom-orange">
                                             <div className="shadow-inner"> </div>
                                         </div>
                                     </div>

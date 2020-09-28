@@ -14,13 +14,13 @@ const AboutPage = () => {
                 <Row className="mt-5">
                     <Col md="6">
                         <div className="left-side">
-                            <h1 className={`title`}>Hello, Welcome</h1>
-                            <h4 className={`subtitle`}>To About Page</h4>
-                            <p className={`subsubTitle`}>Feel free to read short description about me.</p>
+                            <h1 className={`title fadein`}>Hello, Welcome</h1>
+                            <h4 className={`subtitle fadein`}>To About Page</h4>
+                            <p className={`subsubTitle fadein`}>Feel free to read short description about me.</p>
                         </div>
                     </Col>
                     <Col md="6">
-                        <div>
+                        <div className="fadein">
                             <p>My name is Anthony Fink and I am an Junior Full Stack Web developer from Israel. </p>
                             <p>
                                 I have a Full Stack Web Developer degree in John Bryce College and several years of experience working
