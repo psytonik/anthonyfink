@@ -1,11 +1,9 @@
-import axios from 'axios';
+import useSWR from "swr";
+const url = '/api/v1/portfolio';
 
-export const getPortfolio = async () => {
-    try{
-        const url = '/api/v1/portfolio';
-        return await axios.get(url)
-            .then(res=>res.data);
-    }catch (e) {
-        console.log(e,'error')
-    }
+const fetcher = async(...args) => await fetch(...args).then(res => res.json())
+
+export const getPortfolio = () => {
+    const {data,error,...rest} = useSWR(url,fetcher);
+    return {data,error,...rest}
 }

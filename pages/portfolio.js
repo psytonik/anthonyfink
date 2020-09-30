@@ -4,20 +4,14 @@ import BasePage from "../components/BasePage";
 import {Card,CardText,CardTitle,CardBody,CardHeader,Col,Row} from "reactstrap";
 import {getPortfolio} from "../services/action";
 
-const PortfolioPage = () => {
+const Portfolio = () => {
         let [portfolio,setPortfolio] = useState( []);
+        const {data} = getPortfolio();
 
-        const loadData = async () => {
-            const res = await getPortfolio();
-            setPortfolio( await res)
-        }
         useEffect(()=>{
-            let isActive = true;
-            if(isActive){
-                loadData()
-            }
-            return () => isActive = false;
-        },[loadData]);
+            setPortfolio(data)
+        },[data]);
+
     return (
         <BaseLayout>
             <BasePage
@@ -25,9 +19,9 @@ const PortfolioPage = () => {
                 className="portfolio-page"
             >
                 <Row>
-                    {portfolio.map((p,id)=>{
+                    {portfolio && portfolio.map((p,i)=>{
                         return(
-                            <Col md="4" key={id} >
+                            <Col md="4" key={i} >
                                 <React.Fragment >
                         <span>
                             <Card className="portfolio-card">
@@ -49,5 +43,4 @@ const PortfolioPage = () => {
         </BaseLayout>
     );
 };
-
-export default PortfolioPage;
+export default Portfolio;

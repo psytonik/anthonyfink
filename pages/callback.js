@@ -8,7 +8,7 @@ import Typed from 'react-typed';
 const Profile = () => {
     const router = withRouter;
     const {user, isAuthenticated, getAccessTokenSilently} = useAuth0();
-    const [userMetadata, setUserMetadata] = useState(null);
+    const [, setUserMetadata] = useState(null);
     const verification = ["Verifying User..."]
     useEffect(() => {
         const getUserMetadata = async () => {

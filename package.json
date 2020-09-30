@@ -16,6 +16,7 @@
     "bootstrap": "^4.5.2",
     "compression": "^1.7.4",
     "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "moment": "^2.29.0",
     "mongoose": "^5.10.7",
@@ -29,7 +30,6 @@
     "react-typed": "^1.2.0",
     "reactstrap": "^8.6.0",
     "sass": "^1.26.11",
-    "swr": "^0.3.5",
-    "dotenv": "^8.2.0"
+    "swr": "^0.3.5"
   }
 }
