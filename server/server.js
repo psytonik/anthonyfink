@@ -24,13 +24,13 @@ app.prepare().then(()=>{
 
     server.get('/api/v1/admin',(req,res)=>{
         return res.json()
-    })
+    });
     server.get('*',(req,res)=>{
         return handle(req,res)
-    })
+    });
     const PORT = process.env.PORT || 3000;
     server.listen(PORT,(err)=>{
         if (err){console.error(err)}
         console.log('> Server running on Port ', PORT)
     })
-})
+});
