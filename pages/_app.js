@@ -18,6 +18,7 @@ const MyApp = ({ Component, pageProps }) => {
               <meta name="author" content="Anthony Fink"/>
               <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
               <meta charSet="UTF-8"/>
+              <meta name="description" content="Anthony Fink CV site with blog"/>
               <title>Anthony Fink CV</title>
           </Head>
           <Component {...pageProps}/>
