@@ -6,23 +6,22 @@ import '../styles/_index.scss';
 import '../styles/_portfolio.scss'
 import '../styles/_about.scss';
 import '../styles/_cv.scss';
+import '../styles/_notFound.scss';
 
-import React from "react";
-import {Auth0Provider} from "@auth0/auth0-react";
-import {useAuth0} from "@auth0/auth0-react";
+import React,{Fragment} from "react";
+import Head from "next/head";
 
 const MyApp = ({ Component, pageProps }) => {
     return (
-      <React.Fragment>
-          <Auth0Provider
-              domain="dev-wpt9me02.us.auth0.com"
-              clientId="5ZEymaseQy9I7fl5t65DwQEzI6IsESFj"
-              redirectUri="http://localhost:3000/callback"
-              audience="https://dev-wpt9me02.us.auth0.com/api/v2/"
-          >
-            <Component {...pageProps} isAuth={useAuth0()} />
-          </Auth0Provider>
-      </React.Fragment>)
+      <Fragment>
+          <Head>
+              <meta name="author" content="Anthony Fink"/>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+              <meta charSet="UTF-8"/>
+              <title>Anthony Fink CV</title>
+          </Head>
+          <Component {...pageProps}/>
+      </Fragment>)
 }
 
 export default MyApp

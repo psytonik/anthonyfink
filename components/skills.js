@@ -7,7 +7,6 @@ export const skills ={
     "Material Design",
     "Semantic UI",
     "JavaScript ES5/6",
-    "OOP",
     "React",
     "Redux",
     "NextJs"
@@ -20,7 +19,6 @@ export const skills ={
     "AJAX"
   ],
   "Tools": [
-    "Gulp.js",
     "GIT",
     "Jira",
     "YouTrack",
