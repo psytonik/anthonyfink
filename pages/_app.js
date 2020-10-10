@@ -28,6 +28,8 @@ const MyApp = ({ Component, pageProps }) => {
               <meta charSet="UTF-8"/>
               <meta name="description" content="Anthony Fink CV site with blog"/>
               <meta name="theme-color" content="#3bace5"/>
+              <link rel="manifest" href="/manifest.json" />
+
               <title>Anthony Fink CV</title>
           </Head>
           <Component {...pageProps}/>

@@ -1,0 +1,9 @@
+{
+  "name": "Anthony Fink CV",
+  "short_name": "AFCV",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "browser",
+  "scope": "https://anthonyfink-cv.herokuapp.com/",
+  "start_url": "https://anthonyfink-cv.herokuapp.com/"
+}
