@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {Form,Input,FormGroup,Button,Label,Col,CustomInput} from 'reactstrap';
+import {Form,Input,FormGroup,Button,Label,Col,CustomInput,Alert} from 'reactstrap';
 import {postPortfolio} from "../../services/action";
+import {Router} from "../../routes";
 
 const PortfolioForm = () => {
     const [value,setValue] = useState({
@@ -12,10 +13,20 @@ const PortfolioForm = () => {
         startDate:'',
         endDate:'',
         isHidden:false
-    })
+    });
+    const [error,setError] = useState(undefined);
+
     const handleSubmit = e => {
         e.preventDefault();
         postPortfolio({...value})
+            .then(()=>{
+                setError(undefined);
+                Router.pushRoute('/portfolio')
+            })
+            .catch(error=>{
+                const err = error.message || 'Server Error'
+                setError(err)
+            })
     }
     const handleChange = name => e => {
         setValue({...value, [name]:e.target.value})
@@ -30,7 +41,8 @@ const PortfolioForm = () => {
                         value={value.title}
                         id="title"
                         name="title"
-                        required/>
+                        required
+                    />
                 </FormGroup>
                 <FormGroup>
                     <Label for="description">Description</Label>
@@ -95,6 +107,11 @@ const PortfolioForm = () => {
                     </FormGroup>
                 )}
                 <CustomInput type="switch" id="CustomSwitch" name="switch" label="Still work" />
+                {error && (
+                    <Alert className="alert-danger">
+                        {error}
+                    </Alert>
+                )}
                 <Button color="success" size="lg" type="submit" value="submit" >Submit</Button>
             </Form>
         </Col>
