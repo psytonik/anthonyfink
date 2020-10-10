@@ -10,10 +10,18 @@ import '../styles/_notFound.scss';
 
 import React,{Fragment} from "react";
 import Head from "next/head";
+import NextNprogress from 'nextjs-progressbar';
 
 const MyApp = ({ Component, pageProps }) => {
     return (
       <Fragment>
+          <NextNprogress
+              color="orange"
+              startPosition={0.1}
+              stopDelayMs={200}
+              height="3"
+              options={{ easing: 'ease', speed: 500 }}
+          />
           <Head>
               <meta name="author" content="Anthony Fink"/>
               <meta name="viewport" content="width=device-width, initial-scale=1.0"/>

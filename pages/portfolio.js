@@ -4,14 +4,11 @@ import BasePage from "../components/BasePage";
 import {Card,CardText,CardTitle,CardBody,CardHeader,Col,Row} from "reactstrap";
 import {getPortfolio} from "../services/action";
 
-const Portfolio = () => {
+const Portfolio = ({data}) => {
         let [portfolio,setPortfolio] = useState( []);
-        const {data} = getPortfolio();
-
         useEffect(()=>{
             setPortfolio(data)
         },[data]);
-
     return (
         <BaseLayout>
             <BasePage
@@ -43,4 +40,13 @@ const Portfolio = () => {
         </BaseLayout>
     );
 };
+// This gets called on every request
+export async function getServerSideProps() {
+    // Fetch data from external API
+    const res = await getPortfolio()
+    const data = await res;
+
+    // Pass data to the page via props
+    return {props:{data}}
+}
 export default Portfolio;

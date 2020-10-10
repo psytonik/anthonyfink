@@ -1,9 +1,12 @@
-import useSWR from "swr";
+import axios from "axios";
+const LOCALHOST = 'http://localhost:3000'
 const url = '/api/v1/portfolio';
 
-const fetcher = async(...args) => await fetch(...args).then(res => res.json())
-
-export const getPortfolio = () => {
-    const {data,error,...rest} = useSWR(url,fetcher);
-    return {data,error,...rest}
+export const getPortfolio = async () => {
+    return await axios.get(`${LOCALHOST}${url}`)
+        .then(res=>res.data)
+}
+export const postPortfolio = async data => {
+        return await axios.post(`${LOCALHOST}${url}`, data,{method:"POST"})
+            .then(res=> {return res.data});
 }

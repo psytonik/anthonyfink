@@ -1,20 +1,21 @@
 import React, {useState} from 'react';
 import {Form,Input,FormGroup,Button,Label,Col,CustomInput} from 'reactstrap';
+import {postPortfolio} from "../../services/action";
 
 const PortfolioForm = () => {
     const [value,setValue] = useState({
         title:'',
-        description:'',
         position:'',
-        company:'',
+        description:'',
         location:'',
+        company:'',
         startDate:'',
         endDate:'',
         isHidden:false
     })
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(value)
+        postPortfolio({...value})
     }
     const handleChange = name => e => {
         setValue({...value, [name]:e.target.value})
