@@ -29,6 +29,7 @@ const MyApp = ({ Component, pageProps }) => {
               <meta name="description" content="Anthony Fink CV site with blog"/>
               <meta name="theme-color" content="#3bace5"/>
               <meta name="msapplication-TileColor" content="#3bace5"/>
+              <meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png"/>
               <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-icon-57x57.png"/>
               <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-icon-60x60.png"/>
               <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-icon-72x72.png"/>
