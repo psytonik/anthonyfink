@@ -1,5 +1,5 @@
 import axios from "axios";
-const Host = process.env.NODE_ENV === 'production' ? 'https://anthonyfink-cv.herokuapp.com' :'http://localhost:3000';
+const Host = process.env.NODE_ENV === 'production' ? process.env.API_URL :process.env.API_DEV;
 const url = '/api/v1/portfolio';
 
 const rejectPromise = (responseError) => {
