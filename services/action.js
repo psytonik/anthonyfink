@@ -1,6 +1,6 @@
 import axios from "axios";
-const Host = 'https://anthonyfink-cv.herokuapp.com'
-// const Host = 'http://localhost:3000'
+// const Host = 'https://anthonyfink-cv.herokuapp.com';
+const Host = 'http://localhost:3000';
 const url = '/api/v1/portfolio';
 
 const rejectPromise = (responseError) => {
