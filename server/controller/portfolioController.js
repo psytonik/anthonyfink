@@ -18,7 +18,7 @@ exports.getPortfolio = async (req,res)=>{
     try {
         await Portfolio.find({})
             .sort({"startDate":1})              //// Sorting Portfolios by Date from Past to Present
-            .exec((err, allPortfolio)=>{
+            .exec((err, allPortfolio)=>{        /// execute callback
                 if(err){
                     return res.status(422).send(err,'error of something bad')
                 }
