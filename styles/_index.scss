@@ -109,24 +109,28 @@
 
 @media (max-width: 767px) {
   .col-md-6 {
-    //height: 400px;
+    height: 500px;
   }
   .hero-section {
-    margin-left: 10%;
-    margin-bottom: 0;
+    //margin-left: 10%;
+    margin-bottom: 20px;
+    height: 480px;
   }
   .image {
-    width: 90%;
-    height: 380px;
+    //width: 90%;
+    height: 480px;
   }
   .flipper {
-    height: 380px;
 
     .back {
       width: auto;
+      height: 480px;
+
     }
     .front {
-      width: auto
+      width: auto;
+      height: 480px;
+
     }
   }
   .isFlipping {
@@ -135,23 +139,24 @@
     //margin-right: auto;
     .back {
       width: auto;
+      height: 480px;
     }
     .front {
-      width: auto
+      width: auto;
+      height: 480px;
     }
   }
   .shadow-custom {
-    width: 90%;
-    height: 380px;
-    position: absolute;
+    width: 100%;
+    height: 480px;
 
     .shadow-inner {
-      width: 90%;
-      height: 380px;
+      width: 100%;
+      height: 480px;
     }
   }
   .hero-section-content {
-    width: 90%;
+    width: 100%;
     text-align: center;
   }
   .hero-welcome-wrapper {
