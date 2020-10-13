@@ -109,18 +109,18 @@
 
 @media (max-width: 767px) {
   .col-md-6 {
-    height: 400px;
+    //height: 400px;
   }
   .hero-section {
-    margin-left: 20%;
+    margin-left: 10%;
     margin-bottom: 0;
   }
   .image {
-    width: 80%;
-    height: 360px;
+    width: 90%;
+    height: 380px;
   }
   .flipper {
-    height: 360px;
+    height: 380px;
 
     .back {
       width: auto;
@@ -141,17 +141,17 @@
     }
   }
   .shadow-custom {
-    width: 80%;
-    height: 360px;
+    width: 90%;
+    height: 380px;
     position: absolute;
 
     .shadow-inner {
-      width: 80%;
-      height: 360px;
+      width: 90%;
+      height: 380px;
     }
   }
   .hero-section-content {
-    width: 80%;
+    width: 90%;
     text-align: center;
   }
   .hero-welcome-wrapper {
