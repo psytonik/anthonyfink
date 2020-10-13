@@ -16,7 +16,7 @@ export const IndexPage = () => {
     const startAnimation = () => {
         flipInterval.current = setInterval(() => {
             setIsFlipping(prevFlipping => !prevFlipping);
-        }, 10000);
+        }, 20000);
     }
     const roles = ['Web Developer', 'Tech Lover', 'Team Player', 'Creative', 'ReactJS','NextJs','NodeJS','Musician']
     return (
