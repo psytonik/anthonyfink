@@ -7,7 +7,7 @@ import '../styles/_portfolio.scss'
 import '../styles/_about.scss';
 import '../styles/_cv.scss';
 import '../styles/_notFound.scss';
-
+import '../styles/_blog.scss'
 import React,{Fragment} from "react";
 import Head from "next/head";
 import NextNprogress from 'nextjs-progressbar';
