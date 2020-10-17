@@ -1,10 +1,10 @@
 import React, {Fragment, useEffect, useState} from 'react';
-import BaseLayout from "../components/Layout/baseLayout";
-import BasePage from "../components/BasePage";
+import BaseLayout from "@/components/Layout/baseLayout";
+import BasePage from "@/components/BasePage";
 import {Button, Col, Row} from "reactstrap";
-import {getPortfolio,deletePortfolio} from "../services/action";
-import {Router} from '../routes'
-import PortfolioCard from "../components/portfolio/portfolioCard";
+import {getPortfolio,deletePortfolio} from "@/services/action";
+import {Router} from '@/routes'
+import PortfolioCard from "@/components/portfolio/portfolioCard";
 const Portfolio = ({data}) => {
 
     let [portfolio, setPortfolio] = useState([]);

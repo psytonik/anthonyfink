@@ -3,9 +3,11 @@ import {useRouter} from "next/router";
 
 const BlogArticle = () => {
     const router = useRouter();
+    const {slug} = router.query;
+
     return (
         <div>
-            blog id
+            blog name: {slug}
         </div>
     );
 };
