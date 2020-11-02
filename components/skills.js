@@ -16,7 +16,8 @@ export const skills ={
     "MySQL",
     "NoSQL",
     "REST API",
-    "AJAX"
+    "AJAX",
+    "Mongo Db"
   ],
   "Tools": [
     "GIT",

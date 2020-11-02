@@ -1,6 +1,6 @@
 import React from 'react';
-import BaseLayout from "../components/Layout/baseLayout";
-import BasePage from "../components/BasePage";
+import BaseLayout from "@/components/Layout/baseLayout";
+import BasePage from "@/components/BasePage";
 import {Container,Row,Col} from "reactstrap";
 import moment from "moment";
 import Link from "next/link";
@@ -50,43 +50,6 @@ const BlogPage = () => {
                         </div>
                     </Col>
                 </Row>
-
-
-                <footer>
-                    <Container>
-                        <Row>
-                            <div className="col-lg-8 col-md-10 mx-auto">
-                                <ul className="list-inline text-center">
-                                    <li className="list-inline-item">
-                                        <a href="#">
-                                            <span className="fa-stack fa-lg">
-                                                <i className="fas fa-circle fa-stack-2x"/>
-                                                <i className="fab fa-twitter fa-stack-1x fa-inverse"/>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li className="list-inline-item">
-                                        <a href="#">
-                                            <span className="fa-stack fa-lg">
-                                                <i className="fas fa-circle fa-stack-2x"/>
-                                                <i className="fab fa-facebook-f fa-stack-1x fa-inverse"/>
-                                            </span>
-                                        </a>
-                                    </li>
-                                    <li className="list-inline-item">
-                                        <a href="#">
-                                            <span className="fa-stack fa-lg">
-                                                <i className="fas fa-circle fa-stack-2x"/>
-                                                <i className="fab fa-github fa-stack-1x fa-inverse"/>
-                                            </span>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <p className="copyright text-muted">Copyright &copy; Anthony Fink 2020</p>
-                            </div>
-                        </Row>
-                    </Container>
-                </footer>
 
             </BasePage>
 

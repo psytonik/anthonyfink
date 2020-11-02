@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "../Header";
 import Head from "next/head";
+import Footer from "../Footer/footer";
 
 const BaseLayout = ({ className, user, navClass="with-bg", loading, children,headerType }) => {
     const headType = headerType || 'default';
@@ -23,6 +24,7 @@ const BaseLayout = ({ className, user, navClass="with-bg", loading, children,hea
                     </div>
                 </main>
             </div>
+            <Footer/>
         </React.Fragment>
     );
 };

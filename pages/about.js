@@ -30,32 +30,35 @@ const AboutPage = () => {
                             <p>
                                 Passionate candidate, excellent interpersonal skills, High level of troubleshooting and capability
                             </p>
-                            <React.Fragment>
-                                <h4>Front End Skills:</h4>
-                                {FrontEndSkills.map((skill,i)=> <Badge
-                                    className="m-1"
-                                    color="success"
-                                    pill
-                                    key={i}>{skill}</Badge>)}
-                                <hr/>
-                                <h4>Back End Skills:</h4>
-                                {BackEndSkills.map((skill,i)=><Badge
-                                    className="m-1"
-                                    color="warning"
-                                    key={i}
-                                    pill>{skill}</Badge>)}
-                                <hr/>
-                                <h4>Tools:</h4>
-                                {Tools.map((skill,i)=><Badge
-                                    className="m-1"
-                                    key={i}
-                                    color="info"
-                                    pill>{skill}</Badge>)}
-                                <hr/>
+                            <React.Fragment >
+                                <div className="mb-auto">
+                                    <h4>Front End Skills:</h4>
+                                    {FrontEndSkills.map((skill,i)=> <Badge
+                                        className="m-1"
+                                        color="success"
+                                        pill
+                                        key={i}>{skill}</Badge>)}
+                                    <hr/>
+                                    <h4>Back End Skills:</h4>
+                                    {BackEndSkills.map((skill,i)=><Badge
+                                        className="m-1"
+                                        color="warning"
+                                        key={i}
+                                        pill>{skill}</Badge>)}
+                                    <hr/>
+                                    <h4>Tools:</h4>
+                                    {Tools.map((skill,i)=><Badge
+                                        className="m-1"
+                                        key={i}
+                                        color="info"
+                                        pill>{skill}</Badge>)}
+                                    <hr/>
+                                </div>
                             </React.Fragment>
                         </div>
                     </Col>
                 </Row>
+
             </BasePage>
         </BaseLayout>
     );
